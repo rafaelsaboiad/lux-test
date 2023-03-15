@@ -1,3 +1,9 @@
+<script>
+export default {
+  name: "headerSection",
+};
+</script>
+
 <template>
   <header>
     <div id="locateTitle">
@@ -10,12 +16,6 @@
     </div>
   </header>
 </template>
-
-<script>
-export default {
-  name: "headerSection",
-};
-</script>
 
 <style scoped>
 header {
