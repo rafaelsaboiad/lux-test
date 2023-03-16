@@ -7,7 +7,13 @@
         <button id="btnUser">Usuário</button>
       </div>
       <div id="searchConfig">
-        <input id="inputSearch" type="text" placeholder="Buscar..." />
+        <input
+          id="inputSearch"
+          type="text"
+          placeholder="Buscar..."
+          v-model="searchQuery"
+        />
+        <button @click="search">Buscar</button>
       </div>
     </div>
   </main>
@@ -16,6 +22,21 @@
 <script>
 export default {
   name: "homePage",
+  data() {
+    return {
+      searchQuery: "",
+    };
+  },
+  methods: {
+    search() {
+      // aqui você pode fazer uma chamada para a API com a pesquisa do usuário
+      // e, em seguida, redirecionar para outra página usando o router do Vue
+      this.$router.push({
+        name: "ListRepos",
+        params: { searchQuery: this.searchQuery },
+      });
+    },
+  },
 };
 </script>
 

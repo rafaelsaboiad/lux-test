@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import home from "../views/home.vue";
 import header from "../components/header.vue";
+import listRepos from "../views/listRepos.vue";
 
 const routes = [
   {
@@ -12,11 +13,11 @@ const routes = [
     path: "/header",
     name: "header",
     component: header,
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    // component: () =>
-    //   import(/* webpackChunkName: "about" */ "../components/header.vue"),
+  },
+  {
+    path: "/listRepos/:searchQuery",
+    name: "ListRepos",
+    component: listRepos,
   },
 ];
 
